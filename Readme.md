@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
-* Студент: [Анна Курепкина](https://up.htmlacademy.ru/htmlcss/31/user/1536289).
-* Наставник: `Неизвестно`.
+- Студент: [Анна Курепкина](https://up.htmlacademy.ru/htmlcss/31/user/1536289).
+- Наставник: [Михаил Колотович](https://htmlacademy.ru/profile/id225353).
 
 ---
 
