@@ -5,29 +5,45 @@
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
-    <nav>
-      <a>
-        <img
-          src="img/nerds-logo.svg"
-          width="160"
-          height="65"
-          alt="Логотип дизайн-студии Nerds"
-      /></a>
-      <ul>
-        <li><a href="">Студия</a></li>
-        <li><a href="">Клиенты</a></li>
-        <li><a href="">Магазин</a></li>
-        <li><a href="">Контакты</a></li>
-      </ul>
+    <header>
+      <nav>
+        <a>
+          <img
+            src="img/nerds-logo.svg"
+            width="160"
+            height="65"
+            alt="Логотип дизайн-студии Nerds"
+        /></a>
+        <ul>
+          <li><a href="#about">Студия</a></li>
+          <li><a href="#clients">Клиенты</a></li>
+          <li><a href="#shop">Магазин</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
 
-      <a href="">
-        <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина." />
-        Корзина
-      </a>
-    </nav>
+        <a href="blank.html">
+          <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина." />
+          Корзина
+        </a>
+      </nav>
+    </header>
     <main>
       <h1>Дизайн-студия Nerds</h1>
       <section>
+        <p>Долго, дорого, скурпулезно.</p>
+        <p>
+          Математически выверенный дизайн для вашего сайта или мобильного
+          приложения.
+        </p>
+        <a href="#">Узнать больше</a>
+        <img
+          src="img/nerds-index-slide1 1.png"
+          width="760"
+          height="431"
+          alt="Телефоны."
+        />
+      </section>
+      <section id="shop">
         <h2>Услуги</h2>
         <figure>
           <img
@@ -69,7 +85,7 @@
           </figcaption>
         </figure>
       </section>
-      <section>
+      <section id="about">
         <h2>О компании</h2>
         <p>Мы — маленькая, но гордаядизайн-студия из Краснодара.</p>
         <p>
@@ -99,7 +115,7 @@
           </li>
         </ul>
       </section>
-      <section>
+      <section id="clients">
         <h2>Клиенты</h2>
         <ul>
           <li>
@@ -136,7 +152,7 @@
           </li>
         </ul>
       </section>
-      <section>
+      <section id="contacts">
         <h2>Контакты</h2>
         <img
           src="img/map 1.png"
@@ -154,34 +170,45 @@
       <footer>
         <ul>
           <li>
-            <img
-              src="img/vk-icon.svg"
-              width="26"
-              height="15"
-              alt="Иконка ВК."
-            />
+            <a href="#">
+              <img
+                src="img/vk-icon.svg"
+                width="26"
+                height="15"
+                alt="Иконка ВК."
+            /></a>
           </li>
           <li>
-            <img
-              src="img/fb-icon.svg"
-              width="12"
-              height="22"
-              alt="Иконка
-            Facebook."
-            />
+            <a href="#">
+              <img
+                src="img/fb-icon.svg"
+                width="12"
+                height="22"
+                alt="Иконка Facebook."
+            /></a>
           </li>
           <li>
-            <img
-              src="img/insta-icon.svg"
-              width="21"
-              height="21"
-              alt="Иконка Инстаграм."
-            />
+            <a href="#">
+              <img
+                src="img/insta-icon.svg"
+                width="21"
+                height="21"
+                alt="Иконка Инстаграм."
+            /></a>
           </li>
         </ul>
         <p>Давайте дружить, это выгодно!</p>
         <p>Скидка 10% для друзей из социальных сетей.</p>
       </footer>
+      <form action="#">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" placeholder="Имя Фамилия" />
+        <label for="email">Ваш email:</label>
+        <input type="email" id="email" placeholder="email@example.com" />
+        <label for="letter">Текст письма:</label>
+        <input type="text" id="letter" placeholder="В свободной форме" />
+        <button type="submit">Отправить</button>
+      </form>
     </main>
   </body>
 </html>
