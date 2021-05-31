@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Магазин готовых шаблонов</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/favicon/180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
   </head>
   <body>
     <header>
@@ -22,7 +26,6 @@
           <li><a href="#">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-
         <a href="blank.html">
           <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина." />
           Корзина
@@ -33,12 +36,14 @@
       <h1>Магазин готовых шаблонов</h1>
       <section>
         <h2>Фильтр товаров</h2>
-      </section>
-      <section>
         <form method="get" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend>Стоимость</legend>
             <input type="range" />
+            <label for="min-price">От</label>
+            <input type="text" id="min-price" placeholder="0" />
+            <label for="max-price">До</label>
+            <input type="text" id="max-price" placeholder="15 000" />
           </fieldset>
           <fieldset>
             <legend>Сетка:</legend>
@@ -46,18 +51,18 @@
               <li>
                 <input
                   type="radio"
-                  name="adaptive"
+                  name="filter"
                   id="filter-adaptive"
                   checked
                 />
                 <label for="filter-adaptive">Адаптивная</label>
               </li>
               <li>
-                <input type="radio" name="fixed" id="filter-fixed" />
+                <input type="radio" name="filter" id="filter-fixed" />
                 <label for="filter-fixed">Фиксированная</label>
               </li>
               <li>
-                <input type="radio" name="rubber" id="filter-rubber" />
+                <input type="radio" name="filter" id="filter-rubber" />
                 <label for="filter-rubber">Резиновая</label>
               </li>
             </ul>
@@ -102,9 +107,9 @@
       <section>
         <h2>Сортировать:</h2>
         <ul>
-          <li>По цене</li>
-          <li>По типу</li>
-          <li>По названию</li>
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По названию</a></li>
         </ul>
         <button aria-label="По убыванию"></button>
         <button aria-label="По возрастанию"></button>
@@ -113,105 +118,82 @@
         <h2>Список готовых шаблонов</h2>
         <ul>
           <li>
-            <a href="product.html">
+            <img
+              src="img/product-sedona.jpg"
+              width="358"
+              height="578"
+              alt="Сайт Sedona."
+            />
+            <a href="#">
               <h3>Sedona</h3>
-              <p>Информационный сайт для туристов</p>
-              <p>
-                <img
-                  src="img/product-sedona.jpg"
-                  width="358"
-                  height="578"
-                  alt="Сайт Sedona."
-                />
-              </p>
             </a>
-            <p>
-              <button type="button">9 990 ₽</button>
-            </p>
+            <p>Информационный сайт для туристов</p>
+            <button type="button">9 990 ₽</button>
           </li>
           <li>
-            <a href="product.html">
+            <img
+              src="img/product-pink.jpg"
+              width="358"
+              height="578"
+              alt="Сайт Pink."
+            />
+            <a href="#">
               <h3>Pink App</h3>
-              <p>Продуктовый лендинг приложения для iOS и Android</p>
-              <p>
-                <img
-                  src="img/product-pink.jpg"
-                  width="358"
-                  height="578"
-                  alt="Сайт Pink."
-                />
-              </p>
             </a>
-            <p>
-              <button type="button">9 990 ₽</button>
-            </p>
+            <p>Продуктовый лендинг приложения для iOS и Android</p>
+            <button type="button">9 990 ₽</button>
           </li>
           <li>
-            <a href="product.html">
+            <img
+              src="img/product-barbershop.jpg"
+              width="358"
+              height="578"
+              alt="Сайт барбершопа Borodinski."
+            />
+            <a href="#">
               <h3>Barbershop</h3>
-              <p>Сайт салона красоты. Для мужчин, да.</p>
-              <p>
-                <img
-                  src="img/product-barbershop.jpg"
-                  width="358"
-                  height="578"
-                  alt="Сайт барбершопа Borodinski."
-                />
-              </p>
             </a>
-            <p>
-              <button type="button">9 990 ₽</button>
-            </p>
+            <p>Сайт салона красоты. Для мужчин, да.</p>
+            <button type="button">9 990 ₽</button>
           </li>
           <li>
-            <a href="product.html">
+            <img
+              src="img/product-mishka.jpg"
+              width="358"
+              height="578"
+              alt="Сайт Mishka."
+            />
+            <a href="#">
               <h3>MISHKA</h3>
-              <p>Интернет-магазин вязаных игрушек</p>
-              <p>
-                <img
-                  src="img/product-mishka.jpg"
-                  width="358"
-                  height="578"
-                  alt="Сайт Mishka."
-                />
-              </a>
-              </p>
-            <p>
-              <button type="button">9 990 ₽</button>
-            </p>
+            </a>
+            <p>Интернет-магазин вязаных игрушек</p>
+            <button type="button">9 990 ₽</button>
           </li>
           <li>
-            <a href="product.html">
+            <img
+              src="img/product-aplus.jpg"
+              width="358"
+              height="578"
+              alt="Сайт Aplus."
+            />
+            <a href="#">
               <h3>A Plus</h3>
-              <p>Лендинг курсов повышения квалификации</p>
-              <p>
-                <img
-                  src="img/product-aplus.jpg"
-                  width="358"
-                  height="578"
-                  alt="Сайт Aplus."
-                />
-              </a>
-              </p>
-            <p>
-              <button type="button">9 990 ₽</button>
-            </p>
+            </a>
+            <p>Лендинг курсов повышения квалификации</p>
+            <button type="button">9 990 ₽</button>
           </li>
           <li>
-            <a href="product.html">
+            <img
+              src="img/product-kvast.jpg"
+              width="358"
+              height="578"
+              alt="Сайт Kvast."
+            />
+            <a href="#">
               <h3>КВАСТ</h3>
-              <p>Промо-сайт производителя крафтового кваса</p>
-            <p>
-              <img
-                src="img/product-kvast.jpg"
-                width="358"
-                height="578"
-                alt="Сайт Kvast."
-              /></a>
-            </p>
-            <p>
-              <button type="button">9 990 ₽</button>
-            </p>
+            </a>
+            <p>Промо-сайт производителя крафтового кваса</p>
+            <button type="button">9 990 ₽</button>
           </li>
         </ul>
         <ul>
