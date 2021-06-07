@@ -1,4 +1,29 @@
-@import "fonts.css";
+@font-face {
+  font-family: "Roboto";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/roboto.woff2") format("woff2"),
+    url("/fonts/roboto.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/robotomedium.woff2") format("woff2"),
+    url("/fonts/robotomedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/robotobold.woff2") format("woff2"),
+    url("/fonts/robotobold.woff") format("woff");
+}
 
 :root {
   --basic-black: #000000;
@@ -24,10 +49,12 @@
   --button-yellow-active: #e5a722;
 }
 
-.page-body {
+.page-body,
+.catalog-body {
   min-width: 935px;
   margin: 0;
   padding: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
