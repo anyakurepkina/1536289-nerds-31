@@ -157,17 +157,17 @@
   font-weight: 700;
 }
 
+.percent {
+  color: var(--basic-black);
+  font-size: 26px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
 .about-benefits-item p {
   font-weight: 500;
   line-height: 18px;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-}
-
-.percent {
-  color: var(--basic-black);
-  font-size: 45px;
-  line-height: 64px;
-  font-weight: 700;
 }
 
 .service-item h3 {
