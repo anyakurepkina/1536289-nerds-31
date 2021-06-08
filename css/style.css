@@ -150,14 +150,14 @@
   list-style: none;
 }
 
-.about-benefits-item h3 {
+.about-benefits-item-title {
   color: var(--basic-black);
   font-size: 45px;
   line-height: 64px;
   font-weight: 700;
 }
 
-.percent {
+.about-benefits-item-title sup {
   color: var(--basic-black);
   font-size: 26px;
   line-height: 40px;
@@ -280,6 +280,20 @@
   font: inherit;
   background-color: transparent;
   border: 2px solid var(--pink-hover);
+}
+
+.write-us-item input::placeholder,
+.write-us-item textarea::placeholder {
+  color: var(--grey-footer);
+  opacity: 0.5;
+}
+
+.write-us-item input:focus::placeholder {
+  opacity: 1;
+}
+
+.write-us-item input:invalid::placeholder {
+  color: var(--pink-hover);
 }
 
 .footer-social {
