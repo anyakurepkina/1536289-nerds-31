@@ -3,8 +3,8 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/roboto.woff2") format("woff2"),
-    url("/fonts/roboto.woff") format("woff");
+  src: url("../fonts/roboto.woff2") format("woff2"),
+    url("../fonts/roboto.woff") format("woff");
 }
 
 @font-face {
@@ -12,8 +12,8 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/robotomedium.woff2") format("woff2"),
-    url("/fonts/robotomedium.woff") format("woff");
+  src: url("../fonts/robotomedium.woff2") format("woff2"),
+    url("../fonts/robotomedium.woff") format("woff");
 }
 
 @font-face {
@@ -21,8 +21,8 @@
   font-weight: bold;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/robotobold.woff2") format("woff2"),
-    url("/fonts/robotobold.woff") format("woff");
+  src: url("../fonts/robotobold.woff2") format("woff2"),
+    url("../fonts/robotobold.woff") format("woff");
 }
 
 :root {
@@ -62,11 +62,13 @@
   background-color: var(--basic-white);
 }
 
-a {
+.page-body a,
+.catalog-body a {
   text-decoration: none;
 }
 
-img {
+.page-body img,
+.catalog-body img {
   max-width: 100%;
   height: auto;
 }
@@ -90,6 +92,7 @@ img {
 .site-navigation a,
 .cart-link {
   color: var(--basic-black);
+  font-weight: 500;
 }
 
 .site-navigation a:hover,
@@ -122,8 +125,14 @@ img {
 }
 
 .about h3 {
-  color: var(--basic-black);
+  color: var(--basic-extra-dark);
+  font-size: 16px;
+  text-transform: uppercase;
   font-weight: 700;
+}
+
+.about > h3:last-of-type {
+  color: var(--basic-black);
 }
 
 .about-text {
@@ -149,9 +158,24 @@ img {
 }
 
 .about-benefits-item p {
+  font-weight: 500;
   line-height: 18px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
+.percent {
+  color: var(--basic-black);
+  font-size: 45px;
+  line-height: 64px;
+  font-weight: 700;
+}
+
+.service-item h3 {
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
 .button {
   font: inherit;
   text-align: center;
@@ -167,7 +191,6 @@ img {
 }
 .button:active {
   background-color: var(--pink-active);
-  opacity: 0.3;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -231,6 +254,11 @@ img {
   font: inherit;
   background-color: transparent;
   border: 2px solid #d7dcde;
+  line-height: 18px;
+}
+
+.write-us-item textarea {
+  line-height: 18px;
 }
 
 .write-us-item input:hover {
@@ -387,16 +415,17 @@ img {
   color: var(--grey-product-text);
 }
 
-.contacts-adress h3 {
+.contacts h3 {
   color: var(--basic-black);
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
 }
 
-.contacts-adress p,
-a {
+.contacts p,
+.contacts a {
   color: var(--grey-product-text);
+  line-height: 18px;
 }
 
 .contacts-phone {
