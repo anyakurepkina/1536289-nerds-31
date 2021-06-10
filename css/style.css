@@ -49,6 +49,20 @@
   --button-yellow-active: #e5a722;
 }
 
+fieldset:first-child label {
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+fieldset:first-child input {
+  line-height: 22px;
+  background-color: var(--basic-extra-light);
+}
+
+fieldset:first-child input::placeholder {
+  color: var(--basic-extra-dark);
+}
+
 .page-body,
 .catalog-body {
   min-width: 935px;
@@ -100,8 +114,17 @@
   list-style: none;
 }
 
-.site-navigation-current a:not([href]) {
-  background-color: var(--basic-extra-light);
+.site-navigation a:not([href]) {
+  position: relative;
+}
+
+.site-navigation a:not([href])::before {
+  position: absolute;
+  width: 100%;
+  bottom: -13px;
+  height: 2px;
+  content: "";
+  background-color: var(--pink);
 }
 
 .site-navigation a,
@@ -357,6 +380,7 @@
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .filter ul {
@@ -379,6 +403,12 @@
   list-style: none;
 }
 
+.sort-list a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
 .sort-item a {
   color: var(--basic-black);
   opacity: 0.3;
@@ -396,6 +426,13 @@
 
 .sort-item a:active,
 .sort-item-current a:active {
+  color: var(--basic-black);
+}
+
+.sort h2 {
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
   color: var(--basic-black);
 }
 
@@ -436,10 +473,6 @@
   background-color: var(--basic-extra-light);
 }
 
-.price input {
-  background-color: var(--basic-extra-light);
-}
-
 .product-item h3 {
   font-size: 18px;
   line-height: 30px;
@@ -449,6 +482,7 @@
 
 .product-item p {
   color: var(--grey-product-text);
+  line-height: 18px;
 }
 
 .contacts h3 {
@@ -492,4 +526,4 @@
   align-content: start;
 }
 
-.container
+.container;
