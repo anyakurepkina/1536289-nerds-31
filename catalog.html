@@ -9,30 +9,34 @@
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="img/favicon/180.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link href="/css/normalize.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="catalog-body">
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo" href="/">
-          <img
-            src="img/nerds-logo.svg"
-            width="160"
-            height="65"
-            alt="Логотип дизайн-студии Nerds"
-        /></a>
-        <ul class="site-navigation">
-          <li><a href="#">Студия</a></li>
-          <li><a href="#">Клиенты</a></li>
-          <li><a  class="site-navigation-current" href="#">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
+          <div class="main-header-bar">
+            <div class="main-navigation-wrapper">
+              <a class="main-header-logo">
+                <img
+                  src="img/nerds-logo.svg"
+                  width="160"
+                  height="65"
+                  alt="Логотип дизайн-студии Nerds"/>
+              </a>
+              <ul class="site-navigation">
+                <li><a href="#">Студия</a></li>
+                <li><a href="#">Клиенты</a></li>
+                <li><a href="catalog.html">Магазин</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
 
-        <a class="cart-link" href="blank.html">
-          <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина." />
-          Корзина
-        </a>
+            <a class="cart-link" href="blank.html">
+              <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина." />
+                Корзина
+            </a>
+            </div>
+          </div>
       </nav>
     </header>
     <main class="container">
@@ -121,6 +125,7 @@
         <h2 class="visually-hidden">Список готовых шаблонов</h2>
         <ul class="product-list">
           <li class="product-item">
+            <img class="form form-current" src="img/form.svg" width="360" height="40" alt="Изображение окна браузера">
             <img
               src="img/product-sedona.jpg"
               width="358"
@@ -177,7 +182,7 @@
             <button class="button"type="button">9 990 ₽</button></div>
           </li>
           <li class="product-item">
-            <img class="form form-current" src="img/form.svg" width="360" height="40" alt="Изображение окна браузера">
+            <img class="form" src="img/form.svg" width="360" height="40" alt="Изображение окна браузера">
             <img
               src="img/product-aplus.jpg"
               width="358"
@@ -243,6 +248,7 @@
       </section>
     </main>
     <footer class="main-footer">
+      <div class="container">
       <ul class="footer-social">
         <li>
           <a class="social-button" href="#">
@@ -270,6 +276,7 @@
       </ul class="footer-info">
       <p class="footer-text">Давайте дружить, это выгодно!</p>
       <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
     </footer>
   </body>
 </html>
