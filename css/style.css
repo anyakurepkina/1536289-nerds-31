@@ -429,6 +429,7 @@ fieldset:first-child input::placeholder {
 .sort-item a:active,
 .sort-item-current a:active {
   color: var(--basic-black);
+  opacity: 1;
 }
 
 .sort h2 {
@@ -443,22 +444,28 @@ fieldset:first-child input::placeholder {
   background-color: var(--sort-button);
 }
 
+.sort button:last-of-type {
+  background-color: var(--sort-button-last);
+  opacity: 0.2;
+}
+
+.sort button:first-of-type,
+.sort button:active {
+  background-color: var(--sort-button);
+  opacity: 1;
+}
+
+.sort button:hover {
+  background-color: var(--sort-button-last);
+  opacity: 1;
+}
+
 .button-show,
 .button-page {
   background-color: var(--basic-extra-light);
   color: var(--basic-black);
   font-weight: 500;
   text-transform: uppercase;
-}
-
-.sort button:last-of-type {
-  background-color: var(--sort-button-last);
-  opacity: 0.2;
-}
-
-.sort button:hover {
-  background-color: var(--sort-button-last);
-  opacity: 1;
 }
 
 .button-show:hover,
