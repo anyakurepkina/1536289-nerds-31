@@ -47,6 +47,8 @@
   --button-yellow: #efc849;
   --button-yellow-hover: #eab534;
   --button-yellow-active: #e5a722;
+  --sort-button: #231f20;
+  --sort-button-last: #a6a6a6;
 }
 
 fieldset:first-child label {
@@ -436,6 +438,11 @@ fieldset:first-child input::placeholder {
   color: var(--basic-black);
 }
 
+.sort button:first-of-type,
+.sort button:active {
+  background-color: var(--sort-button);
+}
+
 .button-show,
 .button-page {
   background-color: var(--basic-extra-light);
@@ -444,16 +451,27 @@ fieldset:first-child input::placeholder {
   text-transform: uppercase;
 }
 
+.sort button:last-of-type {
+  background-color: var(--sort-button-last);
+  opacity: 0.2;
+}
+
+.sort button:hover {
+  background-color: var(--sort-button-last);
+  opacity: 1;
+}
+
 .button-show:hover,
 .button-page:hover {
   background-color: var(--grey-button-hover);
   color: var(--basic-black);
+  opacity: 1;
 }
 
-.button-show:active .button-page:active {
+.button-show:active,
+.button-page:active {
   background-color: var(--grey-button-active);
-  color: var(--basic-black);
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .button-page-current {
@@ -478,11 +496,21 @@ fieldset:first-child input::placeholder {
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.product-item h3:active {
+  opacity: 0.3;
 }
 
 .product-item p {
   color: var(--grey-product-text);
   line-height: 18px;
+  text-align: center;
+}
+
+.product-item button:active {
+  color: var(--basic-white);
 }
 
 .contacts h3 {
