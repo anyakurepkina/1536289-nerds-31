@@ -232,6 +232,7 @@ fieldset:first-child input::placeholder {
 .slider-list {
   list-style: none;
   padding: 0;
+  margin-top: 0;
 }
 
 .slider-item h2 {
@@ -441,6 +442,11 @@ fieldset:first-child input::placeholder {
   color: var(--basic-black);
   line-height: 18px;
   font-weight: 700;
+}
+
+.write-us__wrapper {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .write-us-item {
