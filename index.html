@@ -12,35 +12,26 @@
   </head>
   <body class="page-body">
     <header class="main-header">
-      <nav class="main-navigation">
-        <div class="main-header-bar">
-          <div class="main-navigation__wrapper">
-            <a class="main-header-logo">
-              <img
-                src="img/nerds-logo.svg"
-                width="160"
-                height="65"
-                alt="Логотип дизайн-студии Nerds"
-              />
-            </a>
-            <ul class="site-navigation">
-              <li><a href="#">Студия</a></li>
-              <li><a href="#">Клиенты</a></li>
-              <li><a href="catalog.html">Магазин</a></li>
-              <li><a href="#">Контакты</a></li>
-            </ul>
+      <nav class="container main-navigation">
+        <a class="main-header-logo">
+          <img
+            src="img/nerds-logo.svg"
+            width="160"
+            height="65"
+            alt="Логотип дизайн-студии Nerds"
+          />
+        </a>
+        <ul class="site-navigation">
+          <li><a href="#">Студия</a></li>
+          <li><a href="#">Клиенты</a></li>
+          <li><a href="catalog.html">Магазин</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
 
-            <a class="cart-link" href="blank.html">
-              <img
-                src="img/cart-icon.svg"
-                width="15"
-                height="15"
-                alt="Корзина."
-              />
-              Корзина
-            </a>
-          </div>
-        </div>
+        <a class="cart-link" href="blank.html">
+          <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина." />
+          Корзина
+        </a>
       </nav>
     </header>
     <main>
@@ -118,7 +109,7 @@
               height="146"
               alt="Компьютеры."
             />
-            <figcaption>
+            <figcaption class="service-item__description">
               <h3>Веб-сайты</h3>
               <p>
                 Мир никогда не будет прежним <br />
@@ -129,7 +120,7 @@
           </figure>
           <figure class="service-item">
             <img src="img/apps.jpg" width="300" height="146" alt="Телефоны." />
-            <figcaption>
+            <figcaption class="service-item__description">
               <h3>Приложения</h3>
               <p>Покорите топ-10 приложений в AppStore и Google Play</p>
               <button class="button button-green">Заказать</button>
@@ -142,7 +133,7 @@
               height="146"
               alt="Доска с диаграммой."
             />
-            <figcaption>
+            <figcaption class="service-item__description">
               <h3>Презентации</h3>
               <p>
                 Вы даже не подозреваете, <br />
@@ -261,7 +252,7 @@
           height="190"
           alt="Маркер с указанием местоположения компании Nerds."
         />
-        <section>
+        <section class="adress">
           <h3>NЁRDS DESIGN STUDIO</h3>
           <p>наб. Реки Карповки, 5 лит П, Санкт-Петербург</p>
           <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
