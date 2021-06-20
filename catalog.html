@@ -43,8 +43,10 @@
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <form method="get" action="https://echo.htmlacademy.ru">
             <fieldset>
-              <legend class="price">Стоимость</legend>
-              <input class="filter-input-range" type="range" />
+              <legend class="price">Стоимость:</legend>
+              <div class="filter-input-range__wrapper">
+                <input class="filter-input-range" type="range" />
+              </div>
               <div class="filter-price">
                 <label class="filter-price__label" for="min-price">От</label>
                 <input
@@ -62,7 +64,7 @@
                 />
               </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="filter-grid">
               <legend class="net">Сетка:</legend>
               <ul>
                 <li>
@@ -95,7 +97,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="filter-features">
               <legend class="specificity">Особенности:</legend>
               <ul>
                 <li>
@@ -359,7 +361,10 @@
         />
         <section class="contacts-adress">
           <h3>NЁRDS DESIGN STUDIO</h3>
-          <p>наб. Реки Карповки, 5 лит П, Санкт-Петербург</p>
+          <p>
+            наб. Реки Карповки, <br />
+            5 лит П, Санкт-Петербург
+          </p>
           <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
           <button class="button">Напишите нам</button>
         </section>

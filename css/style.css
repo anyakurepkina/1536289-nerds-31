@@ -625,13 +625,34 @@ fieldset:first-child input::placeholder {
   opacity: 0.3;
 }
 
+.filter-input-range {
+  padding: 40px 25px;
+  width: 100%;
+  max-width: 205px;
+}
+
+.filter-input-range__wrapper {
+  background-color: var(--basic-extra-light);
+  margin-top: 48px;
+  margin-bottom: 14px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
 .filter-price {
   display: flex;
+  margin-bottom: 54px;
 }
 
 .filter-price__input {
+  text-align: center;
   width: 100%;
   max-width: 80px;
+  height: 38px;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 3px;
 }
 
 .filter-price__label {
@@ -642,6 +663,28 @@ fieldset:first-child input::placeholder {
 
 .filter-price__label:last-of-type {
   margin-left: 33px;
+}
+
+.filter-grid ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 13px;
+  margin-bottom: 43px;
+}
+
+.filter-grid li + li {
+  margin-top: 15px;
+}
+
+.filter-features ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 14px;
+  margin-bottom: 48px;
+}
+
+.filter-features li + li {
+  margin-top: 17px;
 }
 
 .sort {
@@ -787,6 +830,7 @@ fieldset:first-child input::placeholder {
 .product-item__image {
   width: 100%;
   height: auto;
+  border-radius: 0 0 4px 4px;
 }
 
 .product-item:hover .product-item__image {
@@ -839,6 +883,7 @@ fieldset:first-child input::placeholder {
 
 .product-item:hover .product-price {
   display: flex;
+  border-radius: 0 0 4px 4px;
 }
 
 .product-price p {
@@ -911,19 +956,35 @@ fieldset:first-child input::placeholder {
   margin-top: 54px;
   margin-left: 140px;
   margin-bottom: 54px;
+  padding-left: 50px;
+}
+
+.contacts-adress button {
+  display: block;
+  padding: 0 2.75em;
 }
 
 .contacts h3 {
+  margin: 0;
   color: var(--basic-black);
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 23px;
 }
 
 .contacts p,
 .contacts a {
+  margin: 0;
   color: var(--grey-product-text);
   line-height: 18px;
+  margin-bottom: 18px;
+}
+
+.contacts a {
+  display: block;
+  margin-bottom: 38px;
 }
 
 .contacts-phone {
