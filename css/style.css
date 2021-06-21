@@ -461,15 +461,38 @@ fieldset:first-child input::placeholder {
   margin: 0;
 }
 
+.modal {
+  width: 960px;
+  left: 0;
+  position: absolute;
+  bottom: 180px;
+  right: 0;
+  margin: auto;
+  padding: 63px 100px 84px;
+  background: var(--basic-white);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
 .modal label {
   color: var(--basic-black);
   line-height: 18px;
   font-weight: 700;
+  padding-bottom: 9px;
 }
 
-.write-us__wrapper {
-  display: flex;
-  justify-content: space-evenly;
+.modal h2 {
+  margin: 0;
+  font-size: 45px;
+  line-height: 53px;
+  margin-bottom: 37px;
+}
+
+.write-us-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  width: 760px;
 }
 
 .write-us-form button {
@@ -479,6 +502,7 @@ fieldset:first-child input::placeholder {
   width: -webkit-fit-content;
   width: fit-content;
   padding: 0 5.2em;
+  margin-top: 47px;
 }
 
 .write-us-item {
@@ -491,28 +515,40 @@ fieldset:first-child input::placeholder {
   background-color: transparent;
   border: 2px solid #d7dcde;
   line-height: 18px;
+  padding: 1em 0.9em;
+  border-radius: 3px;
 }
 
 .write-us-item textarea {
   line-height: 18px;
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+  padding: 1em 0.9em;
+  height: 118px;
+  box-sizing: border-box;
+  resize: none;
 }
 
-.write-us-item input:hover {
-  font: inherit;
-  background-color: transparent;
-  border: 2px solid var(--grey-form);
+.write-us-item:last-of-type {
+  grid-column: 1 / -1;
 }
 
-.write-us-item input:focus {
-  font: inherit;
+.write-us-item input:hover,
+.write-us-item textarea:hover {
   background-color: transparent;
-  border: 2px solid var(--basic-black);
+  border-color: var(--grey-form);
 }
 
-.write-us-item input:invalid {
-  font: inherit;
+.write-us-item input:focus,
+.write-us-item textarea:focus {
   background-color: transparent;
-  border: 2px solid var(--pink-hover);
+  border-color: var(--basic-black);
+}
+
+.write-us-item input:invalid,
+.write-us-item textarea:invalid {
+  background-color: transparent;
+  border-color: (--pink-hover);
 }
 
 .write-us-item input::placeholder,
@@ -527,6 +563,25 @@ fieldset:first-child input::placeholder {
 
 .write-us-item input:invalid::placeholder {
   color: var(--pink-hover);
+}
+
+.write-us-form-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 78px;
+  right: 90px;
+  width: 21px;
+  height: 21px;
+  background-color: var(--basic-white);
+  border: none;
+  color: rgba(251, 86, 90, 0.3);
+  font-size: 40px;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .footer-social {
