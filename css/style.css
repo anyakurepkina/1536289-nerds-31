@@ -761,6 +761,8 @@ fieldset:first-child input::placeholder {
   appearance: none;
   border: none;
   border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
 }
 
 .filter-price__label {
