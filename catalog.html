@@ -44,21 +44,25 @@
           <form method="get" action="https://echo.htmlacademy.ru">
             <fieldset>
               <legend class="price">Стоимость:</legend>
-              <div class="filter-input-range__wrapper">
-                <input class="filter-input-range" type="range" />
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
               </div>
               <div class="filter-price">
                 <label class="filter-price__label" for="min-price">От</label>
                 <input
                   class="filter-price__input"
-                  type="text"
+                  type="number"
                   id="min-price"
                   placeholder="0"
                 />
                 <label class="filter-price__label" for="max-price">До</label>
                 <input
                   class="filter-price__input"
-                  type="text"
+                  type="number"
                   id="max-price"
                   placeholder="15 000"
                 />
