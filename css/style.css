@@ -333,6 +333,12 @@ fieldset:first-child input::placeholder {
 
 .about-list {
   padding: 0;
+  margin-left: 30px;
+  list-style: url(../img/list-style.svg);
+}
+
+.about-list li + li {
+  margin-top: 24px;
 }
 
 .about-benefits {
