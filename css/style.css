@@ -91,6 +91,10 @@
   color: rgba(255, 255, 255, 0.3);
 }
 
+.service-item__description p {
+  padding-bottom: 0;
+}
+
 .service-item__description button {
   display: flex;
   align-items: center;
@@ -98,6 +102,7 @@
   width: -webkit-fit-content;
   width: fit-content;
   padding: 0 2.5em;
+  margin-top: 33px;
 }
 
 .button-green {
@@ -186,6 +191,8 @@ fieldset:first-child input::placeholder {
   margin: 0;
   padding: 0;
   list-style: none;
+  padding-right: 43px;
+  padding-top: 4px;
 }
 
 .site-navigation li + li {
@@ -255,17 +262,22 @@ fieldset:first-child input::placeholder {
   display: grid;
   grid-column: 1/-1;
   grid-row: 1;
+  margin-top: 65px;
+  margin-bottom: 0;
 }
 
 .slider-item p {
   grid-column: 1/-1;
   grid-row: 2;
   max-width: 416px;
+  margin-top: 28px;
 }
 
 .slider-item img {
   grid-column-start: 2;
   grid-row: 1/-1;
+  margin-top: -12px;
+  margin-left: 16px;
 }
 
 .slider-item {
@@ -286,6 +298,14 @@ fieldset:first-child input::placeholder {
   margin-top: 38px;
   margin-bottom: 80px;
   padding: 0 3.4em;
+}
+
+.container--1174 {
+  width: 100%;
+  max-width: 1174px;
+  margin-left: 130px;
+  margin-right: 116px;
+  margin-top: 56px;
 }
 
 .about {
@@ -333,8 +353,22 @@ fieldset:first-child input::placeholder {
 
 .about-list {
   padding: 0;
-  margin-left: 30px;
-  list-style: url(../img/list-style.svg);
+  margin-top: 24px;
+  list-style: none;
+  margin-left: 4px;
+}
+
+.about-list li {
+  display: flex;
+  align-items: center;
+}
+
+.about-list li::before {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: var(--pink);
+  margin-right: 7px;
 }
 
 .about-list li + li {
@@ -344,21 +378,37 @@ fieldset:first-child input::placeholder {
 .about-benefits {
   width: 100%;
   max-width: 360px;
+  margin-left: 68px;
 }
 
 .about-benefits h3 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 37px auto 31px;
+  white-space: nowrap;
+  margin-top: 29px;
+  margin-left: 51px;
+}
+
+.about-benefits img {
+  margin-left: 33px;
 }
 
 .about-benefits-list {
   display: grid;
-  grid-template-columns: 130px 130px 130px;
+  width: 379px;
+  grid-template-columns: 130px 125px 135px;
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-right: 126px;
+  margin-left: 34px;
+  margin-top: 30px;
+}
+
+.about-benefits-item:nth-of-type(2) {
+  margin-left: -10px;
+}
+
+.about-benefits-item:nth-of-type(3) {
+  margin-left: -16px;
 }
 
 .about-benefits-item h4 {
@@ -386,43 +436,72 @@ fieldset:first-child input::placeholder {
   margin-top: 10px;
 }
 
+.container--1100 {
+  max-width: 1100px;
+  padding: 0;
+}
+
 .service {
-  padding: 80px 0;
+  padding: 65px 0;
+  margin-left: 140px;
+  margin-right: 200px;
 }
 
 .service-item {
   margin: 0;
 }
 
+.service-item img {
+  width: 300px;
+}
+
 .service__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 100px;
+  display: flex;
+  justify-content: start;
+}
+
+.service__wrapper figure + figure {
+  margin-left: 100px;
 }
 
 .service-item h3 {
+  margin: 0;
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-black);
+  margin-top: 18px;
 }
 
 .partner-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
   padding-top: 46px;
-  padding-bottom: 44px;
+  padding-bottom: 39px;
   border-top: 2px solid var(--basic-extra-light);
   border-bottom: 2px solid var(--basic-extra-light);
   align-items: center;
+  margin-top: -18px;
+  margin-left: -9px;
 }
 
 .partner-list li {
   padding: 0 45px;
   position: relative;
+}
+
+.partner-list li:nth-of-type(2) {
+  margin-left: 15px;
+}
+
+.partner-list li:nth-of-type(3) {
+  margin-left: 24px;
+}
+
+.partner-list li:nth-of-type(4) {
+  margin-left: 35px;
 }
 
 .partner-list li:last-child::after {
@@ -458,9 +537,17 @@ fieldset:first-child input::placeholder {
 
 .main-footer__wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 351px 1fr;
   color: var(--grey-footer);
   line-height: 22px;
+}
+
+.main-footer__wrapper p:first-of-type {
+  margin-top: 7px;
+}
+
+.main-footer__wrapper p:last-of-type {
+  margin-top: 10px;
 }
 
 .footer-text {
@@ -595,17 +682,24 @@ fieldset:first-child input::placeholder {
 }
 
 .footer-social {
-  display: grid;
-  grid-template-columns: repeat(3, 80px);
-  column-gap: 10px;
+  display: flex;
+  justify-content: flex-start;
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-left: -50px;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+
+.footer-social li + li {
+  margin-left: 9px;
 }
 
 .social-button {
-  width: 80px;
-  height: 80px;
+  width: 81px;
+  height: 81px;
   border-radius: 50%;
   background-color: var(--grey-social);
   display: flex;
@@ -1056,13 +1150,14 @@ fieldset:first-child input::placeholder {
   grid-row: 1/-1;
   width: 100%;
   height: 416px;
+  margin-top: -7px;
 }
 
 .contacts img:last-of-type {
   grid-column: 2;
   grid-row: 1;
-  margin-left: 388px;
-  margin-top: 70px;
+  margin-left: 399px;
+  margin-top: 69px;
 }
 
 .contacts section {
@@ -1070,9 +1165,10 @@ fieldset:first-child input::placeholder {
   grid-row: 1/-1;
   background: var(--basic-white);
   margin-top: 54px;
-  margin-left: 140px;
   margin-bottom: 54px;
   padding-left: 50px;
+  margin-top: 52px;
+  margin-left: 140px;
 }
 
 .contacts-adress button {
@@ -1105,4 +1201,8 @@ fieldset:first-child input::placeholder {
 
 .contacts-phone {
   color: var(--grey-product-text);
+}
+
+.container--1060 {
+  width: 1060px;
 }
