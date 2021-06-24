@@ -206,7 +206,7 @@ fieldset:first-child input::placeholder {
 .site-navigation a:not([href])::before {
   position: absolute;
   width: 100%;
-  bottom: -13px;
+  bottom: -20px;
   height: 2px;
   content: "";
   background-color: var(--pink);
@@ -750,13 +750,14 @@ fieldset:first-child input::placeholder {
 
 .page-title {
   margin: 0;
-  padding: 70px 0 100px;
+  padding: 70px 0 109px;
   background-color: var(--basic-extra-light);
   color: var(--basic-black);
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   text-align: center;
+  margin-top: -3px;
 }
 
 .page-catalog {
@@ -778,6 +779,7 @@ fieldset:first-child input::placeholder {
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-top: -2px;
 }
 
 .price {
@@ -890,23 +892,29 @@ fieldset:first-child input::placeholder {
 .filter-grid ul {
   margin: 0;
   padding: 0;
-  margin-top: 13px;
   margin-bottom: 43px;
+  margin-top: 15px;
+  margin-left: 19px;
 }
 
 .filter-grid li + li {
-  margin-top: 15px;
+  margin-top: 20px;
+}
+
+.filter-features legend {
+  margin-top: 4px;
 }
 
 .filter-features ul {
   margin: 0;
   padding: 0;
-  margin-top: 14px;
+  margin-top: 15px;
   margin-bottom: 48px;
+  margin-left: 19px;
 }
 
 .filter-features li + li {
-  margin-top: 17px;
+  margin-top: 20px;
 }
 
 .sort {
@@ -1020,7 +1028,8 @@ fieldset:first-child input::placeholder {
 }
 
 .product {
-  margin-top: 50px;
+  margin-top: 48px;
+  margin-left: 2px;
 }
 
 .product-list {
@@ -1153,8 +1162,8 @@ fieldset:first-child input::placeholder {
 
 .contacts {
   display: grid;
-  grid-template-columns: 448px 1fr;
-  padding-top: 80px;
+  grid-template-columns: 459px 1fr;
+  padding-top: 78px;
 }
 
 .contacts img:first-of-type {
@@ -1175,10 +1184,9 @@ fieldset:first-child input::placeholder {
   grid-column: 1;
   grid-row: 1/-1;
   background: var(--basic-white);
-  margin-top: 54px;
   margin-bottom: 47px;
   padding-left: 50px;
-  margin-top: 52px;
+  margin-top: 54px;
   margin-left: 140px;
 }
 
@@ -1216,4 +1224,8 @@ fieldset:first-child input::placeholder {
 
 .container--1060 {
   width: 1060px;
+}
+
+.contacts-footer {
+  margin-top: -19px;
 }
