@@ -1176,7 +1176,7 @@ fieldset:first-child input::placeholder {
 .contacts img:last-of-type {
   grid-column: 2;
   grid-row: 1;
-  margin-left: 399px;
+  margin-left: 389px;
   margin-top: 71px;
 }
 
