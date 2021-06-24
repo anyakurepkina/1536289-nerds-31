@@ -946,11 +946,7 @@ fieldset:first-child input::placeholder {
   content: url(../img/checkbox-off.svg);
 }
 
-.filter-input-checkbox:checked + label::after {
-  display: block;
-  position: absolute;
-  top: -2px;
-  left: -36px;
+.filter-input-checkbox:checked + label::before {
   content: url(../img/checkbox-on.svg);
 }
 
