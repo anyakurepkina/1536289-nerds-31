@@ -1137,7 +1137,7 @@ fieldset:first-child input::placeholder {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  padding-top: 26px;
+  padding-top: 31px;
   padding-bottom: 12px;
 }
 
@@ -1173,7 +1173,7 @@ fieldset:first-child input::placeholder {
 
 .product-price p {
   margin: 0;
-  padding-bottom: 30px;
+  padding-bottom: 35px;
 }
 
 .product-price button {
