@@ -146,6 +146,10 @@ fieldset:first-child input::placeholder {
   color: var(--basic-extra-dark);
 }
 
+fieldset:first-child input:last-child {
+  padding-left: 21px;
+}
+
 .page-body,
 .catalog-body {
   min-width: 935px;
