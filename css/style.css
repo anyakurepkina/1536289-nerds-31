@@ -191,6 +191,7 @@ fieldset:first-child input:last-child {
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: 0;
@@ -1188,6 +1189,7 @@ fieldset:first-child input:last-child {
 .page {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   margin-top: 49px;
@@ -1195,6 +1197,7 @@ fieldset:first-child input:last-child {
 
 .page-item + .page-item {
   margin-left: 11px;
+  margin-bottom: 11px;
 }
 
 .button-page {
@@ -1285,5 +1288,5 @@ fieldset:first-child input:last-child {
 }
 
 .contacts-footer {
-  margin-top: -19px;
+  margin-top: -31px;
 }
