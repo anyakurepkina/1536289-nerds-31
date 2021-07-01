@@ -307,10 +307,6 @@ fieldset:first-child input:last-child {
 }
 
 .container--1174 {
-  width: 100%;
-  max-width: 1174px;
-  margin-left: 130px;
-  margin-right: 116px;
   margin-top: 56px;
 }
 
@@ -386,7 +382,7 @@ fieldset:first-child input:last-child {
 .about-benefits {
   width: 100%;
   max-width: 360px;
-  margin-left: 68px;
+  margin-left: 83px;
 }
 
 .about-benefits h3 {
@@ -451,12 +447,11 @@ fieldset:first-child input:last-child {
 
 .service {
   padding: 65px 0;
-  margin-left: 140px;
-  margin-right: 200px;
 }
 
 .service-item {
   margin: 0;
+  margin-left: -30px;
 }
 
 .service-item img {
@@ -577,10 +572,9 @@ fieldset:first-child input:last-child {
 }
 
 .modal {
-  display: none;
   width: 960px;
   position: absolute;
-  top: 50%;
+  top: 1999px;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 63px 100px 84px;
@@ -600,7 +594,6 @@ fieldset:first-child input:last-child {
   margin: 0;
   font-size: 45px;
   line-height: 53px;
-  margin-bottom: 37px;
 }
 
 .write-us-form {
@@ -608,6 +601,7 @@ fieldset:first-child input:last-child {
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
   width: 760px;
+  margin-top: 37px;
 }
 
 .write-us-form button {
@@ -623,6 +617,7 @@ fieldset:first-child input:last-child {
 .write-us-item {
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
 .write-us-item input {
@@ -646,6 +641,7 @@ fieldset:first-child input:last-child {
 
 .write-us-item:last-of-type {
   grid-column: 1 / -1;
+  margin-top: 34px;
 }
 
 .write-us-item input:hover,
@@ -692,7 +688,7 @@ fieldset:first-child input:last-child {
   background-color: var(--basic-white);
   border: none;
   color: rgba(251, 86, 90, 0.3);
-  font-size: 40px;
+  font-size: 49px;
   -webkit-appearance: none;
   appearance: none;
   padding: 0;
@@ -1230,7 +1226,6 @@ fieldset:first-child input:last-child {
 .contacts img:first-of-type {
   grid-column: 1/-1;
   grid-row: 1/-1;
-  width: 100%;
   height: 416px;
 }
 
