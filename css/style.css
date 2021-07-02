@@ -572,9 +572,10 @@ fieldset:first-child input:last-child {
 }
 
 .modal {
+  display: none;
   width: 960px;
   position: absolute;
-  top: 1999px;
+  top: 2001px;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 63px 100px 84px;
@@ -625,7 +626,9 @@ fieldset:first-child input:last-child {
   background-color: transparent;
   border: 2px solid #d7dcde;
   line-height: 18px;
-  padding: 1em 0.9em;
+  padding: 0 0.9em;
+  padding-top: 10px;
+  padding-bottom: 6px;
   border-radius: 3px;
 }
 
@@ -1220,7 +1223,12 @@ fieldset:first-child input:last-child {
 .contacts {
   display: grid;
   grid-template-columns: 459px 1fr;
-  padding-top: 78px;
+  margin-top: 78px;
+  background-image: url(../img/map.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top -143px left 0;
+  height: 416px;
 }
 
 .contacts img:first-of-type {
@@ -1234,6 +1242,7 @@ fieldset:first-child input:last-child {
   grid-row: 1;
   margin-left: 389px;
   margin-top: 71px;
+  height: auto;
 }
 
 .contacts section {
