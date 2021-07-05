@@ -627,8 +627,8 @@ fieldset:first-child input:last-child {
   border: 2px solid #d7dcde;
   line-height: 18px;
   padding: 0 0.9em;
-  padding-top: 10px;
-  padding-bottom: 6px;
+  padding-top: 14px;
+  padding-bottom: 15px;
   border-radius: 3px;
 }
 
@@ -640,6 +640,7 @@ fieldset:first-child input:last-child {
   height: 118px;
   box-sizing: border-box;
   resize: none;
+  padding-top: 13px;
 }
 
 .write-us-item:last-of-type {
