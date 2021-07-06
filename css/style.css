@@ -915,7 +915,7 @@ fieldset:first-child input:last-child {
   border-radius: 3px;
   -webkit-appearance: none;
   -moz-appearance: textfield;
-  padding-left: 11px;
+  padding-left: 21px;
   box-sizing: border-box;
 }
 
@@ -1152,7 +1152,7 @@ fieldset:first-child input:last-child {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  padding-top: 31px;
+  padding-top: 24px;
   padding-bottom: 12px;
 }
 
