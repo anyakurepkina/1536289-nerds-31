@@ -1250,10 +1250,10 @@ fieldset:first-child input:last-child {
   grid-column: 1;
   grid-row: 1/-1;
   background: var(--basic-white);
-  margin-bottom: 47px;
   padding-left: 50px;
   margin-top: 54px;
   margin-left: 140px;
+  margin-bottom: 54px;.
 }
 
 .contacts-adress button {
