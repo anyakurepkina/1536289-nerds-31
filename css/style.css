@@ -989,8 +989,9 @@ fieldset:first-child input:last-child {
   align-items: center;
   list-style: none;
   margin: 0;
-  margin-right: 47px;
+  margin-right: 48px;
   padding: 0;
+  margin-top: -6px;
 }
 
 .sort-list a {
@@ -1001,6 +1002,11 @@ fieldset:first-child input:last-child {
 
 .sort-item + .sort-item {
   margin-left: 25px;
+}
+
+.sort-item:last-child {
+  margin-top: -4px;
+  margin-left: 27px;
 }
 
 .sort-item a {
@@ -1055,6 +1061,10 @@ fieldset:first-child input:last-child {
 .sort .button:active {
   background-color: var(--sort-button);
   opacity: 1;
+}
+
+.button-show {
+  margin-top: 2px;
 }
 
 .button-show,
@@ -1293,5 +1303,5 @@ fieldset:first-child input:last-child {
 }
 
 .contacts-footer {
-  margin-top: -31px;
+  margin-top: 48px;
 }
