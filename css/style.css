@@ -840,6 +840,13 @@ fieldset:first-child input:last-child {
   border-radius: 50%;
 }
 
+.filter-input-radio:hover + label::before,
+.filter-input-radio:hover + label::after,
+.filter-input-radio:focus + label::before,
+.filter-input-radio:focus + label::after {
+  opacity: 1;
+}
+
 .filter-input-range {
   padding: 40px 25px;
   width: 100%;
@@ -889,6 +896,9 @@ fieldset:first-child input:last-child {
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 #cfcfcf;
   cursor: pointer;
+  box-sizing: content-box;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .range-controls .toggle-min {
@@ -954,11 +964,17 @@ fieldset:first-child input:last-child {
   position: absolute;
   top: -2px;
   left: -36px;
+  opacity: 0.4;
   content: url(../img/checkbox-off.svg);
 }
 
 .filter-input-checkbox:checked + label::before {
   content: url(../img/checkbox-on.svg);
+}
+
+.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:focus + label::before {
+  opacity: 1;
 }
 
 .filter-features ul {
@@ -994,12 +1010,6 @@ fieldset:first-child input:last-child {
   margin-top: -6px;
 }
 
-.sort-list a {
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-}
-
 .sort-item + .sort-item {
   margin-left: 25px;
 }
@@ -1009,23 +1019,31 @@ fieldset:first-child input:last-child {
   margin-left: 27px;
 }
 
-.sort-item a {
+.sort-item button {
+  padding: 0;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
   color: var(--basic-black);
   opacity: 0.3;
+  background-color: transparent;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.sort-item-current a {
+.sort-item-current button {
   opacity: 1;
 }
 
-.sort-item a:hover,
-.sort-item-current a:hover {
+.sort-item button:hover,
+.sort-item-current button:hover {
   color: var(--basic-black);
   opacity: 0.6;
 }
 
-.sort-item a:active,
-.sort-item-current a:active {
+.sort-item button:active,
+.sort-item-current button:active {
   color: var(--basic-black);
   opacity: 1;
 }
@@ -1170,7 +1188,7 @@ fieldset:first-child input:last-child {
   position: absolute;
   bottom: 0;
   left: 0;
-  display: none;
+  opacity: 0;
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -1180,6 +1198,7 @@ fieldset:first-child input:last-child {
 .product-item:hover .product-price {
   display: flex;
   border-radius: 0 0 4px 4px;
+  opacity: 1;
 }
 
 .product-item:first-child .product-price p {

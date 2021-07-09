@@ -41,15 +41,19 @@
       <div class="container page-catalog">
         <section class="filter">
           <h2 class="visually-hidden">Фильтр товаров</h2>
-          <form method="get" action="https://echo.htmlacademy.ru">
+          <form
+            method="get"
+            action="https://echo.htmlacademy.ru"
+            target="_blank"
+          >
             <fieldset>
               <legend class="price">Стоимость:</legend>
               <div class="range-controls">
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0"></div>
-                <div class="toggle toggle-max" tabindex="0"></div>
+                <button type="button" class="toggle toggle-min"></button>
+                <button type="button" class="toggle toggle-max"></button>
               </div>
               <div class="filter-price">
                 <label class="filter-price__label" for="min-price">От</label>
@@ -161,10 +165,14 @@
             <h2 class="sort__title">Сортировать:</h2>
             <ul class="sort-list">
               <li class="sort-item sort-item-current">
-                <a href="#">По цене</a>
+                <button type="button">По цене</button>
               </li>
-              <li class="sort-item"><a href="#">По типу</a></li>
-              <li class="sort-item"><a href="#">По названию</a></li>
+              <li class="sort-item">
+                <button type="button">По типу</button>
+              </li>
+              <li class="sort-item">
+                <button type="button">По названию</button>
+              </li>
             </ul>
             <button
               class="button button--down button--active"
@@ -181,14 +189,14 @@
                   src="img/form.svg"
                   width="360"
                   height="40"
-                  alt="Изображение окна браузера"
+                  aria-hidden="true"
                 />
                 <img
                   class="product-item__image"
                   src="img/product-sedona.jpg"
                   width="358"
                   height="578"
-                  alt="Сайт Sedona."
+                  alt=""
                 />
                 <div class="product-price">
                   <a href="#">
@@ -198,7 +206,13 @@
                     Информационный сайт <br />
                     для туристов
                   </p>
-                  <button class="button" type="button">9 990 ₽</button>
+                  <button
+                    class="button"
+                    type="button"
+                    aria-label="Добавить сайт в корзину. Цена 9 990 рублей."
+                  >
+                    9 990 ₽
+                  </button>
                 </div>
               </li>
               <li class="product-item">
@@ -207,14 +221,14 @@
                   src="img/form.svg"
                   width="360"
                   height="40"
-                  alt="Изображение окна браузера"
+                  aria-hidden="true"
                 />
                 <img
                   class="product-item__image"
                   src="img/product-pink.jpg"
                   width="358"
                   height="578"
-                  alt="Сайт Pink."
+                  alt=""
                 />
                 <div class="product-price">
                   <a href="#">
@@ -224,7 +238,13 @@
                     Продуктовый лендинг <br />
                     приложения для iOS и Android
                   </p>
-                  <button class="button" type="button">9 990 ₽</button>
+                  <button
+                    class="button"
+                    type="button"
+                    aria-label="Добавить сайт в корзину. Цена 9 990 рублей."
+                  >
+                    9 990 ₽
+                  </button>
                 </div>
               </li>
               <li class="product-item">
@@ -233,14 +253,14 @@
                   src="img/form.svg"
                   width="360"
                   height="40"
-                  alt="Изображение окна браузера"
+                  aria-hidden="true"
                 />
                 <img
                   class="product-item__image"
                   src="img/product-barbershop.jpg"
                   width="358"
                   height="578"
-                  alt="Сайт барбершопа Borodinski."
+                  alt=""
                 />
                 <div class="product-price">
                   <a href="#">
@@ -250,7 +270,13 @@
                     Сайт салона красоты. <br />
                     Для мужчин, да.
                   </p>
-                  <button class="button" type="button">9 990 ₽</button>
+                  <button
+                    class="button"
+                    type="button"
+                    aria-label="Добавить сайт в корзину. Цена 9 990 рублей."
+                  >
+                    9 990 ₽
+                  </button>
                 </div>
               </li>
               <li class="product-item">
@@ -259,14 +285,14 @@
                   src="img/form.svg"
                   width="360"
                   height="40"
-                  alt="Изображение окна браузера"
+                  aria-hidden="true"
                 />
                 <img
                   class="product-item__image"
                   src="img/product-mishka.jpg"
                   width="358"
                   height="578"
-                  alt="Сайт Mishka."
+                  alt=""
                 />
                 <div class="product-price">
                   <a href="#">
@@ -276,7 +302,13 @@
                     Интернет-магазин <br />
                     вязаных игрушек
                   </p>
-                  <button class="button" type="button">9 990 ₽</button>
+                  <button
+                    class="button"
+                    type="button"
+                    aria-label="Добавить сайт в корзину. Цена 9 990 рублей."
+                  >
+                    9 990 ₽
+                  </button>
                 </div>
               </li>
               <li class="product-item">
@@ -285,24 +317,35 @@
                   src="img/form.svg"
                   width="360"
                   height="40"
-                  alt="Изображение окна браузера"
+                  aria-hidden="true"
                 />
                 <img
                   class="product-item__image"
                   src="img/product-aplus.jpg"
                   width="358"
                   height="578"
-                  alt="Сайт Aplus."
+                  alt=""
                 />
                 <div class="product-price">
                   <a href="#">
-                    <h3 class="product-item__title">A Plus</h3>
+                    <h3
+                      class="product-item__title"
+                      aria-label="Добавить сайт в корзину. Цена 9 990 рублей."
+                    >
+                      A Plus
+                    </h3>
                   </a>
                   <p>
                     Лендинг курсов повышения <br />
                     квалификации
                   </p>
-                  <button class="button" type="button">9 990 ₽</button>
+                  <button
+                    class="button"
+                    type="button"
+                    aria-label="Добавить сайт в корзину. Цена 9 990 рублей."
+                  >
+                    9 990 ₽
+                  </button>
                 </div>
               </li>
               <li class="product-item">
@@ -311,14 +354,14 @@
                   src="img/form.svg"
                   width="360"
                   height="40"
-                  alt="Изображение окна браузера"
+                  aria-hidden="true"
                 />
                 <img
                   class="product-item__image"
                   src="img/product-kvast.jpg"
                   width="358"
                   height="578"
-                  alt="Сайт Kvast."
+                  alt=""
                 />
                 <div class="product-price">
                   <a href="#">
@@ -328,7 +371,13 @@
                     Промо-сайт производителя <br />
                     крафтового кваса
                   </p>
-                  <button class="button" type="button">9 990 ₽</button>
+                  <button
+                    class="button"
+                    type="button"
+                    aria-label="Добавить сайт в корзину. Цена 9 990 рублей."
+                  >
+                    9 990 ₽
+                  </button>
                 </div>
               </li>
             </ul>
