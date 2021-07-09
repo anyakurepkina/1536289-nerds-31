@@ -4,63 +4,74 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Магазин готовых шаблонов</title>
     <link rel="icon" href="favicon.ico" />
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="img/favicon/180.png" />
     <link rel="manifest" href="manifest.webmanifest" />
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
   </head>
-  <body>
-    <header>
-      <nav>
-        <a href="index.html">
+  <body class="catalog-body">
+    <header class="main-header">
+      <nav class="container main-navigation">
+        <a class="main-header-logo" href="index.html">
           <img
             src="img/nerds-logo.svg"
             width="160"
             height="65"
             alt="Логотип дизайн-студии Nerds"
-        /></a>
-        <ul>
-          <li><a href="#a">Студия</a></li>
+          />
+        </a>
+        <ul class="site-navigation">
+          <li><a href="#">Студия</a></li>
           <li><a href="#">Клиенты</a></li>
-          <li><a href="catalog.html">Магазин</a></li>
+          <li><a>Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
 
-        <a href="blank.html">
+        <a class="cart-link" href="blank.html">
           <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина." />
           Корзина
         </a>
       </nav>
     </header>
-    <footer>
-      <ul>
-        <li>
-          <a href="#">
-            <img src="img/vk-icon.svg" width="26" height="15" alt="Иконка ВК."
-          /></a>
-        </li>
-        <li>
-          <a href="#">
-            <img
-              src="img/fb-icon.svg"
-              width="12"
-              height="22"
-              alt="Иконка Facebook."
-          /></a>
-        </li>
-        <li>
-          <a href="#">
-            <img
-              src="img/insta-icon.svg"
-              width="21"
-              height="21"
-              alt="Иконка Инстаграм."
-          /></a>
-        </li>
-      </ul>
-      <p>Давайте дружить, это выгодно!</p>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+    <footer class="main-footer">
+      <div class="main-footer__wrapper container container--1060">
+        <ul class="footer-social">
+          <li>
+            <a class="social-button" href="#">
+              <img
+                src="img/vk-icon.svg"
+                width="26"
+                height="15"
+                alt="Иконка ВК."
+            /></a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img
+                src="img/fb-icon.svg"
+                width="12"
+                height="22"
+                alt="Иконка Facebook."
+            /></a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img
+                src="img/insta-icon.svg"
+                width="21"
+                height="21"
+                alt="Иконка Инстаграм."
+            /></a>
+          </li>
+        </ul>
+        <div class="footer__info">
+          <p class="footer-text">Давайте дружить, это выгодно!</p>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
