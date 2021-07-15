@@ -663,7 +663,7 @@ fieldset:first-child input:last-child {
 .write-us-item input:invalid,
 .write-us-item textarea:invalid {
   background-color: transparent;
-  border-color: (--pink-hover);
+  border-color: var(--pink-hover);
 }
 
 .write-us-item input::placeholder,
@@ -1282,7 +1282,7 @@ fieldset:first-child input:last-child {
   padding-left: 50px;
   margin-top: 54px;
   margin-left: 140px;
-  margin-bottom: 54px;.
+  margin-bottom: 54px;
 }
 
 .contacts-adress button {
