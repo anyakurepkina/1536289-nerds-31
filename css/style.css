@@ -27,6 +27,7 @@
 
 :root {
   --basic-black: #000000;
+  --basic-black-active: rgba(0, 0, 0, 0.3);
   --basic-white: #ffffff;
   --basic-extra-light: #eeeeee;
   --basic-extra-dark: #283136;
@@ -56,7 +57,7 @@
   width: 100%;
   max-width: 1160px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 .visually-hidden {
@@ -90,6 +91,7 @@
 .button:active {
   background-color: var(--pink-active);
   color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 .service-item__description p {
@@ -132,27 +134,27 @@
   color: rgba(255, 255, 255, 0.3);
 }
 
-fieldset:first-child label {
+.filter-fieldset:first-child label {
   line-height: 22px;
   text-transform: uppercase;
 }
 
-fieldset:first-child input {
+.filter-fieldset:first-child input {
   line-height: 22px;
   background-color: var(--basic-extra-light);
 }
 
-fieldset:first-child input::placeholder {
+.filter-fieldset:first-child input::placeholder {
   color: var(--basic-extra-dark);
 }
 
-fieldset:first-child input:last-child {
+.filter-fieldset:first-child input:last-child {
   padding-left: 21px;
 }
 
 .page-body,
 .catalog-body {
-  min-width: 935px;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -201,7 +203,7 @@ fieldset:first-child input:last-child {
   padding-top: 4px;
 }
 
-.site-navigation li + li {
+.site-navigation__item + .site-navigation__item {
   margin-left: 45px;
 }
 
@@ -229,11 +231,18 @@ fieldset:first-child input:last-child {
   color: var(--pink);
 }
 
+.main-header-logo:hover {
+  opacity: 0.7;
+}
+
+.main-header-logo:active {
+  opacity: 0.3;
+}
+
 .site-navigation a:active,
 .cart-link:active,
-.main-header-logo:active img .product-item h3:active {
-  color: var(--basic-black);
-  opacity: 0.3;
+.product-item h3:active {
+  color: var(--basic-black-active);
 }
 
 .cart-link {
@@ -245,12 +254,8 @@ fieldset:first-child input:last-child {
   margin-right: 25px;
 }
 
-.main-header-logo:hover {
-  color: var(--basic-black);
-  opacity: 0.7;
-}
-
 .slider {
+  position: relative;
   background-color: var(--basic-extra-light);
 }
 
@@ -291,7 +296,11 @@ fieldset:first-child input:last-child {
   grid-template-rows: repeat(3, auto);
 }
 
-.slider-item--active {
+.slide {
+  display: none;
+}
+
+.slide-current {
   display: grid;
 }
 
@@ -306,8 +315,39 @@ fieldset:first-child input:last-child {
   padding: 0 3.4em;
 }
 
-.container--1174 {
-  margin-top: 56px;
+.slider-controls {
+  position: absolute;
+  bottom: 96px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  width: 88px;
+  justify-content: space-between;
+}
+
+.slider-controls button {
+  position: relative;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  background-color: var(--basic-white);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls .current::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #c1c1c1;
+  border-radius: 50%;
+  content: "";
 }
 
 .about {
@@ -317,6 +357,7 @@ fieldset:first-child input:last-child {
 .about__wrapper {
   display: grid;
   grid-template-columns: auto auto;
+  margin-top: 51px;
 }
 
 .about-left {
@@ -360,12 +401,12 @@ fieldset:first-child input:last-child {
   margin-left: 4px;
 }
 
-.about-list li {
+.about-list__item {
   display: flex;
   align-items: center;
 }
 
-.about-list li::before {
+.about-list__item::before {
   content: "";
   width: 25px;
   height: 2px;
@@ -375,7 +416,7 @@ fieldset:first-child input:last-child {
   left: -4px;
 }
 
-.about-list li + li {
+.about-list__item + .about-list__item {
   margin-top: 24px;
 }
 
@@ -387,12 +428,15 @@ fieldset:first-child input:last-child {
 
 .about-benefits h3 {
   white-space: nowrap;
-  margin-top: 29px;
+  margin-top: 36px;
   margin-left: 51px;
 }
 
-.about-benefits img {
+.about-benefits__image {
+  width: 360px;
+  height: 208px;
   margin-left: 33px;
+  background-image: url("../img/nerds-illustration.png");
 }
 
 .about-benefits-list {
@@ -440,22 +484,31 @@ fieldset:first-child input:last-child {
   margin-top: 10px;
 }
 
-.container--1100 {
-  max-width: 1100px;
-  padding: 0;
-}
-
 .service {
-  padding: 65px 0;
+  padding: 70px 0;
+  position: relative;
 }
 
 .service-item {
   margin: 0;
-  margin-left: -30px;
 }
 
-.service-item img {
+.service-item__image {
   width: 300px;
+  height: 146px;
+  margin-top: -5px;
+}
+
+.service-item__image--web {
+  background-image: url("../img/web-site.png");
+}
+
+.service-item__image--apps {
+  background-image: url("../img/apps.png");
+}
+
+.service-item__image--presentation {
+  background-image: url("../img/presentation.png");
 }
 
 .service__wrapper {
@@ -463,7 +516,7 @@ fieldset:first-child input:last-child {
   justify-content: start;
 }
 
-.service__wrapper figure + figure {
+.service-item + .service-item {
   margin-left: 100px;
 }
 
@@ -474,6 +527,10 @@ fieldset:first-child input:last-child {
   text-transform: uppercase;
   color: var(--basic-black);
   margin-top: 18px;
+}
+
+.service-item__description {
+  margin-top: 24px;
 }
 
 .partner-list {
@@ -651,7 +708,7 @@ fieldset:first-child input:last-child {
 .write-us-item input:hover,
 .write-us-item textarea:hover {
   background-color: transparent;
-  border-color: var(--grey-form);
+  border-color: var(--grey-form-hover);
 }
 
 .write-us-item input:focus,
@@ -664,6 +721,7 @@ fieldset:first-child input:last-child {
 .write-us-item textarea:invalid {
   background-color: transparent;
   border-color: var(--pink-hover);
+  color: var(--pink-hover);
 }
 
 .write-us-item input::placeholder,
@@ -699,6 +757,14 @@ fieldset:first-child input:last-child {
   cursor: pointer;
 }
 
+.write-us-form-close:hover {
+  color: var(--pink);
+}
+
+.write-us-form-close:active {
+  color: rgba(251, 86, 90, 0.1);
+}
+
 .footer-social {
   display: flex;
   justify-content: flex-start;
@@ -709,10 +775,12 @@ fieldset:first-child input:last-child {
   width: -moz-fit-content;
   width: -webkit-fit-content;
   width: fit-content;
+  flex-wrap: wrap;
 }
 
-.footer-social li + li {
+.footer-social__item + .footer-social__item {
   margin-left: 9px;
+  margin-bottom: 5px;
 }
 
 .social-button {
@@ -726,8 +794,6 @@ fieldset:first-child input:last-child {
 }
 
 .social-button:hover {
-  width: 79px;
-  height: 79px;
   border-radius: 50%;
   background-color: var(--pink-hover);
   display: flex;
@@ -736,13 +802,12 @@ fieldset:first-child input:last-child {
 }
 
 .social-button:active {
-  width: 79px;
-  height: 79px;
   border-radius: 50%;
   background-color: var(--pink-active);
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 .adress button {
@@ -773,7 +838,7 @@ fieldset:first-child input:last-child {
   margin-top: 55px;
 }
 
-.fieldset:first-child input {
+filter-fieldset:first-child input {
   padding-left: 21px;
 }
 
@@ -805,8 +870,8 @@ fieldset:first-child input:last-child {
   position: relative;
 }
 
-.filter-input-radio:hover + label,
-.filter-input-checkbox:hover + label {
+.filter-input-radio:hover:not(:disabled) + label,
+.filter-input-checkbox:hover:not(:disabled) + label {
   color: var(--grey-radio-hover);
 }
 
@@ -840,8 +905,8 @@ fieldset:first-child input:last-child {
   border-radius: 50%;
 }
 
-.filter-input-radio:hover + label::before,
-.filter-input-radio:hover + label::after,
+.filter-input-radio:hover:not(:disabled) + label::before,
+.filter-input-radio:hover:not(:disabled) + label::after,
 .filter-input-radio:focus + label::before,
 .filter-input-radio:focus + label::after {
   opacity: 1;
@@ -972,7 +1037,7 @@ fieldset:first-child input:last-child {
   content: url(../img/checkbox-on.svg);
 }
 
-.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:hover:not(:disabled) + label::before,
 .filter-input-checkbox:focus + label::before {
   opacity: 1;
 }
@@ -1109,6 +1174,8 @@ fieldset:first-child input:last-child {
 .button-page:active {
   background-color: var(--grey-button-active);
   color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  border: none;
 }
 
 .product {
@@ -1317,7 +1384,7 @@ fieldset:first-child input:last-child {
   color: var(--grey-product-text);
 }
 
-.container--1060 {
+.container--min {
   width: 1060px;
 }
 

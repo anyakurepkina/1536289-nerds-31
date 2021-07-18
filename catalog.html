@@ -24,10 +24,10 @@
           />
         </a>
         <ul class="site-navigation">
-          <li><a href="#">Студия</a></li>
-          <li><a href="#">Клиенты</a></li>
-          <li><a>Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li class="site-navigation__item"><a href="#">Студия</a></li>
+          <li class="site-navigation__item"><a href="#">Клиенты</a></li>
+          <li class="site-navigation__item"><a>Магазин</a></li>
+          <li class="site-navigation__item"><a href="#">Контакты</a></li>
         </ul>
 
         <a class="cart-link" href="blank.html">
@@ -46,14 +46,22 @@
             action="https://echo.htmlacademy.ru"
             target="_blank"
           >
-            <fieldset>
+            <fieldset class="filter-fieldset">
               <legend class="price">Стоимость:</legend>
               <div class="range-controls">
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <button type="button" class="toggle toggle-min"></button>
-                <button type="button" class="toggle toggle-max"></button>
+                <button
+                  type="button"
+                  class="toggle toggle-min"
+                  aria-label="Меньше"
+                ></button>
+                <button
+                  type="button"
+                  class="toggle toggle-max"
+                  aria-label="Больше"
+                ></button>
               </div>
               <div class="filter-price">
                 <label class="filter-price__label" for="min-price">От</label>
@@ -72,7 +80,7 @@
                 />
               </div>
             </fieldset>
-            <fieldset class="filter-grid">
+            <fieldset class="filter-fieldset filter-grid">
               <legend class="net">Сетка:</legend>
               <ul>
                 <li>
@@ -105,7 +113,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-features">
+            <fieldset class="filter-fieldset filter-features">
               <legend class="specificity">Особенности:</legend>
               <ul>
                 <li>
@@ -418,9 +426,9 @@
       </section>
     </main>
     <footer class="main-footer">
-      <div class="main-footer__wrapper container container--1060">
+      <div class="main-footer__wrapper container container--min">
         <ul class="footer-social">
-          <li>
+          <li class="footer-social__item">
             <a class="social-button" href="#">
               <img
                 src="img/vk-icon.svg"
@@ -429,7 +437,7 @@
                 alt="Иконка ВК."
             /></a>
           </li>
-          <li>
+          <li class="footer-social__item">
             <a class="social-button" href="#">
               <img
                 src="img/fb-icon.svg"
@@ -438,7 +446,7 @@
                 alt="Иконка Facebook."
             /></a>
           </li>
-          <li>
+          <li class="footer-social__item">
             <a class="social-button" href="#">
               <img
                 src="img/insta-icon.svg"
@@ -454,6 +462,35 @@
         </div>
       </div>
     </footer>
-    <script src="js/script.min.js></script>
+    <section class="modal">
+      <h2>Напишите нам</h2>
+      <form class="write-us-form" action="#">
+        <p class="write-us-item">
+          <label for="name">Ваше имя:</label>
+          <input type="text" id="name" placeholder="Имя Фамилия" />
+        </p>
+        <p class="write-us-item">
+          <label for="email">Ваш email:</label>
+          <input type="email" id="email" placeholder="email@example.com" />
+        </p>
+        <p class="write-us-item">
+          <label for="letter">Текст письма:</label>
+          <textarea
+            id="letter"
+            name="letter"
+            placeholder="В свободной форме"
+          ></textarea>
+        </p>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button
+        class="write-us-form-close"
+        type="button"
+        aria-label="Закрыть окно"
+      >
+        &times;
+      </button>
+    </section>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
