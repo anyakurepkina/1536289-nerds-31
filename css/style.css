@@ -427,7 +427,6 @@
 .about-benefits {
   width: 100%;
   max-width: 360px;
-  margin-left: 83px;
 }
 
 .about-benefits h3 {
@@ -672,7 +671,7 @@
   width: -moz-fit-content;
   width: -webkit-fit-content;
   width: fit-content;
-  padding: 0 5.2em;
+  padding: 17px 5.2em 15px;
   margin-top: 47px;
 }
 
@@ -1368,8 +1367,9 @@ filter-fieldset:first-child input {
 }
 
 .contacts-adress .button {
-  display: block;
+  display: inline-block;
   padding: 17px 2.75em 15px;
+  color: var(--basic-white);
 }
 
 .contacts h3 {
